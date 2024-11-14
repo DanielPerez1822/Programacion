@@ -1,0 +1,3 @@
+INSERT INTO inventor (nom_inventor, invencion, año, nacionalidad, patentes) VALUES ("Nikola Tesla","Corriente Alterna",1887,"Serbia",300)
+INSERT INTO inventor (nom_inventor, invencion, año, nacionalidad, patentes) VALUES ("Thomas Edison","Bombilla",1879,"Estadounidense",1093)
+INSERT INTO inventor (nom_inventor, invencion, año, nacionalidad, patentes) VALUES ("Marie Curie","Radioactividad",1898,"Polaca",5)

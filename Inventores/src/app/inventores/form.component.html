@@ -1,0 +1,58 @@
+<div class="card bg-dark text-white">
+    <div class="card-header">
+        {{titulo}}
+    </div>
+    <div class="card-body">
+            <form >
+                <!-- <div class="form-group row">
+                    <label for="id" class="col-form-label col-sm-2">Id del Inventor:</label>
+                    <div class="col-sm-6">
+                        <input type="number" class="form-control" [(ngModel)]="inventor.id" name="id">
+                    </div> 
+                </div>-->
+                <div class="form-group row">
+                    <label for=" nomInventor" class="col-form-label col-sm-2">Nombre del Inventor:</label>
+                    <div class="col-sm-6">
+                        <input type="text" class="form-control" [(ngModel)]="inventor.nomInventor" name=" nomInventor">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="invencion" class="col-form-label col-sm-2">Invencion</label>
+                    <div class="col-sm-6">
+                        <input type="text" class="form-control" [(ngModel)]="inventor.invencion" name="invencion">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="anio" class="col-form-label col-sm-2">Año</label>
+                    <div class="col-sm-6">
+                        <input type="number" class="form-control" [(ngModel)]="inventor.anio" name="anio">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="nacionalidad" class="col-form-label col-sm-2">Nacionalidad</label>
+                    <div class="col-sm-6">
+                        <input type="text" class="form-control" [(ngModel)]="inventor.nacionalidad" name="nacionalidad">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="patentes" class="col-form-label col-sm-2">Patentes</label>
+                    <div class="col-sm-6">
+                        <input type="number" class="form-control" [(ngModel)]="inventor.patentes" name="patentes">
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <div class="col-sm-6">
+                        <button class="btn btn-primary" role="button" (click)='create()'*ngIf="!inventor.id else elseBlock">
+                            Crear
+                        </button>
+
+                         <ng-template #elseBlock>
+                            <button class="btn btn-primary" role="button" (click)='update()'>Editar</button>
+                        </ng-template>
+
+                    </div>
+                </div>
+            </form>
+    </div>
+</div>

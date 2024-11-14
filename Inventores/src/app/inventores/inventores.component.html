@@ -1,0 +1,26 @@
+<div class="cartas bg-light mb-3 my-5">
+  <div class="cartas-header">Inventores</div>
+  <div class="cartas-body">
+    <h5 class="cartas-title">Cartas de Inventores</h5>
+    <div class="my-2 text-left">
+      <button class="btn btn-rounded btn-primary" type="button" [routerLink]="['/inventores/form']">Crear Carta de Inventor</button>
+    </div>
+
+    <!-- Aquí comienza la sección de cartas individuales para cada inventor -->
+    <div class="cartas-contenedor">
+      <div *ngFor="let indice of inventores" class="carta mb-3 p-3 bg-white border">
+        <h6>ID: {{indice.id}}</h6>
+        <p><strong>Inventor:</strong> {{indice.nomInventor}}</p>
+        <p><strong>Invención:</strong> {{indice.invencion}}</p>
+        <p><strong>Año:</strong> {{indice.anio}}</p>
+        <p><strong>Nacionalidad:</strong> {{indice.nacionalidad}}</p>
+        <p><strong>Patentes:</strong> {{indice.patentes}}</p>
+        <div class="text-right">
+          <button type="button" name="editar" [routerLink]="['/inventores/form', indice.id]" class="btn btn-primary mr-2">Editar</button>
+          <button type="button" name="eliminar" (click)="delete(indice)" class="btn btn-danger">Eliminar</button>
+        </div>
+      </div>
+    </div>
+    <!-- Fin de la sección de cartas individuales -->
+  </div>
+</div>
